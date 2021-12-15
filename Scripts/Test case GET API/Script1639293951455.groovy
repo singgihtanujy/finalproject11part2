@@ -17,3 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+response = WS.sendRequest(findTestObject('Tugas API GET'))
+
+WS.verifyElementPropertyValue(response, 'data.email', 'janet.weaver@reqres.in')
+
+WS.verifyElementPropertyValue(response, 'data.first_name', 'Janet')
+
+WS.verifyElementPropertyValue(response, 'data.last_name', 'Weaver')
+
